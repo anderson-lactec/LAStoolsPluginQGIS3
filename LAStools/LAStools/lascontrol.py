@@ -49,7 +49,7 @@ class lascontrol(LAStoolsAlgorithm):
         commands = [os.path.join(LAStoolsUtils.LAStoolsPath(), "bin", "lascontrol")]
         self.addParametersVerboseCommands64(parameters, context, commands)
         self.addParametersPointInputCommands(parameters, context, commands)
-        self.addParametersGenericInputCommandsfile(parameters, context, commands, "-cp")
+        self.addParametersGenericInputCommands(parameters, context, commands, "-cp")
         parse = self.parameterAsString(parameters, lascontrol.PARSE_STRING, context)
         if parse != "":
             commands.append("-parse")
